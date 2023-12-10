@@ -3,6 +3,14 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "main_menu_select_color",
+      "value": "#17abe3"
+    },
+    {
+      "name": "main_menu_non_select_color",
+      "value": "#2c2c2c"
     }
   ]
 }
