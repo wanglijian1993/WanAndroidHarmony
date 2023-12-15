@@ -3,6 +3,7 @@ import { NewsTypeBean } from '../../bean/MainBean';
 import Const  from '../../constants/CommonConstants';
 import Logger from '../../utils/Logger';
 import MainContent from './MainContent';
+import TitleBar from './TitleBar';
 @Component
 export default  struct MainView{
 
@@ -26,22 +27,26 @@ export default  struct MainView{
     })
   }
   build(){
-    Tabs({barPosition:BarPosition.End,controller:this.tabControl}){
-      ForEach(this.tabsType,(item:NewsTypeBean,index:number)=>{
-        TabContent(){
-           Column(){
-             Text(item.name)
-           }
-           .width('100%')
-           .height('100%')
-           .backgroundColor('#007DFF')
-        }
-        .tabBar(this.TabBuilder(index))
-      },(item:NewsTypeBean)=>JSON.stringify(item))
+    Column(){
+      TitleBar({leftVisible:false,title:this.tabsType[this.currentIndex].name})
+      Tabs({barPosition:BarPosition.End,controller:this.tabControl}){
+        ForEach(this.tabsType,(item:NewsTypeBean,index:number)=>{
+          TabContent(){
+            Column(){
+              MainContent({index:index})
+            }
+            .width('100%')
+            .height('100%')
+            .backgroundColor('#007DFF')
+          }
+          .tabBar(this.TabBuilder(index))
+        },(item:NewsTypeBean)=>JSON.stringify(item))
+      }.height('95%')
+      .onChange((index)=>{
+        this.currentIndex=index;
+      })
     }
-    .onChange((index)=>{
-      this.currentIndex=index;
-    })
+
   }
 
 }

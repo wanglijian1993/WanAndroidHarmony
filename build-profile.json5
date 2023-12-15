@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/jinher/.ohos/config/auto_debug_WanAndroidHarmony_com.example.wanandroidharmony_270086000300057802.cer",
+          "storePassword": "00000019ADE345669C28572B963C177F85836A0FCF00C56448253B261A9DC3EB9A1A989BA6195FAC96",
+          "keyAlias": "debugKey",
+          "keyPassword": "000000197082C39AFEF2F152076374B0279DD2664D1F51A27FC43078B8E5CD8AB0C272890BEE548B38",
+          "profile": "/Users/jinher/.ohos/config/auto_debug_WanAndroidHarmony_com.example.wanandroidharmony_270086000300057802.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/jinher/.ohos/config/auto_debug_WanAndroidHarmony_com.example.wanandroidharmony_270086000300057802.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [

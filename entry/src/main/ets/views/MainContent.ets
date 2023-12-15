@@ -1,8 +1,16 @@
 
+import { HomePage } from './home/HomePage'
 @Component
 export default  struct MainContent{
-  @State content:string=''
+  @State index:number=0
   build(){
-    Text(this.content)
+   Column(){
+     if(this.index==0){
+      HomePage()
+     }else{
+       Text('123')
+     }
+   }
+
   }
 }

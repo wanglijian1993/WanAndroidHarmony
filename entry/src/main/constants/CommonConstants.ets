@@ -12,7 +12,22 @@ export default  class CommonConstants{
       {id:4,name:"我的",selectIcon:$r('app.media.ic_mine_select'),nonSelectIcon:$r('app.media.ic_mine_non_select')},
     ]
 
+  /**
+   * The http timeout duration.
+   */
+  static readonly HTTP_READ_TIMEOUT: number = 10000;
+  /**
+   * Http request success status code.
+   */
+  static readonly HTTP_CODE_200: number = 200;
+  /**
+   * The request success status code.
+   */
+  static readonly SERVER_CODE_SUCCESS: number = 0;
 
 }
-
+export const enum ContentType {
+  JSON = 'application/json'
+}
+export const TITLE_BAR_HEIGHT=40
 
