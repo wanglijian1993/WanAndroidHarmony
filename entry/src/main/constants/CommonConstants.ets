@@ -31,3 +31,6 @@ export const enum ContentType {
 }
 export const TITLE_BAR_HEIGHT=40
 
+export const WIDTH_100='100%'
+export const HEIGHT_100='100%'
+

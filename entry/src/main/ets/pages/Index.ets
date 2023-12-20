@@ -1,4 +1,4 @@
-import Logger from '../../utils/Logger'
+import { HEIGHT_100 } from '../../constants/CommonConstants'
 import MainView from '../views/MainView'
 @Entry
 @Component
@@ -10,6 +10,7 @@ struct Index {
     Column(){
       MainView()
     }
+    .height(HEIGHT_100)
     .justifyContent(FlexAlign.Center)
   }
 }

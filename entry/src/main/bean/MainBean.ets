@@ -18,7 +18,7 @@ export class Banners{
 
 export class ArticleInfo{
   curPage:number;
-  article:Array<Article>;
+  datas:Array<Article>;
   offset:number;
   over:boolean;
   pageCount:number;
@@ -57,7 +57,7 @@ export class Article{
   superChapterId:number;
   superChapterName:string;
   tags:Array<string>;
-  title:String;
+  title:string;
   type:number;
   userId:number;
   visible:number;

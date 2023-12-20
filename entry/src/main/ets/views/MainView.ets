@@ -1,6 +1,6 @@
 import hilog from '@ohos.hilog';
 import { NewsTypeBean } from '../../bean/MainBean';
-import Const  from '../../constants/CommonConstants';
+import Const,{HEIGHT_100,WIDTH_100}  from '../../constants/CommonConstants';
 import Logger from '../../utils/Logger';
 import MainContent from './MainContent';
 import TitleBar from './TitleBar';
@@ -35,8 +35,8 @@ export default  struct MainView{
             Column(){
               MainContent({index:index})
             }
-            .width('100%')
             .height('100%')
+            .width('100%')
             .backgroundColor('#007DFF')
           }
           .tabBar(this.TabBuilder(index))
@@ -46,6 +46,8 @@ export default  struct MainView{
         this.currentIndex=index;
       })
     }
+    .height(HEIGHT_100)
+    .width(WIDTH_100)
 
   }
 

@@ -32,8 +32,10 @@ import Const from '../../../constants/CommonConstants'
       let url=`${BASE_URL}${HOME_ARTICLE}${index}/json`
       url+='?page_size='+pageSize
      httpRequestGet(url).then((result:ResponseResult)=>{
+       Logger.info(`getHomeArticle--result:${result}`)
        if(result.errorCode === Const.SERVER_CODE_SUCCESS){
          resolve(result.data);
+         Logger.info(`getHomeArticle:${result.data.toString()}`)
        }else{
          reject($r('app.string.page_none_msg'))
        }
